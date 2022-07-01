@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState } from "react";
 // @ts-ignore
-import styled, { useTheme } from "styled-components";
+import styled from "styled-components";
 import backgroundImage from "../../../src/assets/Main_background_image.svg";
 import { media } from "../../styles/media";
+import { MobileNav } from "../header/components/mobileNav/MobileNav";
 import { Header } from "../header/Header";
 import { InvestOpportunities } from "../investOpportunities/InvestOpportunities";
 import { ScanAndInvest } from "../scanAndInvest/ScanAndInvest";
@@ -46,6 +47,7 @@ const Container = styled.div`
   position: relative;
   z-index: 10;
   padding: 40px 50px 70px 48px;
+
   ${media.tablet`
     padding: 30px 0 40px 0;
   `}
@@ -55,16 +57,40 @@ const Container = styled.div`
 `;
 
 export const Main = () => {
-  const theme = useTheme();
+  const [isOpenMobileNav, setIsOpenMobileNav] = useState(false);
+
+  const navList = [
+    { value: "Features", to: "/" },
+    { value: "Blog", to: "/" },
+    { value: "Premium", to: "/" },
+    { value: "App", to: "/" },
+  ];
+
+  const closeMobileNav = () => {
+    setIsOpenMobileNav(false);
+  };
+  const getStartedMobileOnClick = () => {
+    console.log("Get started");
+  };
 
   return (
-    <Wrapper>
+    <Wrapper className={isOpenMobileNav ? "openModal" : ""}>
       <Image src={backgroundImage.src} alt={"Background"} />
       <Container>
-        <Header />
+        <Header
+          navList={navList}
+          isOpenMobileNav={isOpenMobileNav}
+          setIsOpenMobileNav={setIsOpenMobileNav}
+        />
         <Slogan />
         <ScanAndInvest />
         <InvestOpportunities />
+        <MobileNav
+          navList={navList}
+          isOpenModal={isOpenMobileNav}
+          getStartedOnClick={getStartedMobileOnClick}
+          closeMobileNav={closeMobileNav}
+        />
       </Container>
     </Wrapper>
   );

@@ -33,6 +33,7 @@ const IconsWrapper = styled.div`
   ${media.phone`
     width: 100%;
     justify-content: space-between;
+    flex-direction: column;
   `}
 `;
 const Item = styled.div`

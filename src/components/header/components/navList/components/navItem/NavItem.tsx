@@ -10,7 +10,7 @@ const Item = styled.li`
   justify-content: center;
   cursor: pointer;
   & > a {
-    color: ${(props: any) => props.theme.colors.black1} !important;
+    color: ${(props: any) => props.theme.colors.black1};
     font-family: "Manrope", sans-serif;
     font-weight: 200;
     text-decoration: none;
