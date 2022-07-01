@@ -3,6 +3,7 @@ import type { NextPage } from "next";
 import styled, { useTheme } from "styled-components";
 import Head from "next/head";
 import { Main } from "../src/components/main/Main";
+import { media } from "../src/styles/media";
 
 const Wrapper = styled.div`
   width: 100%;
@@ -15,6 +16,10 @@ const Wrapper = styled.div`
   background-color: ${(props: any) => props.theme.colors.mint};
   padding: 88px 80px;
   overflow: auto;
+
+  ${media.phone`
+    padding: 44px 18px;
+  `}
 `;
 
 const Home: NextPage = () => {

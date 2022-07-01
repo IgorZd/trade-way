@@ -1,6 +1,7 @@
 import React from "react";
 // @ts-ignore
 import styled, { useTheme } from "styled-components";
+import { media } from "../../styles/media";
 import { Button } from "../button/Button";
 import { Logo } from "./components/logo/Logo";
 import { NavList } from "./components/navList/NavList";
@@ -13,6 +14,11 @@ const Wrapper = styled.div`
   align-items: center;
   position: relative;
   z-index: 10;
+  ${media.tablet`
+  justify-content: center;
+  & > button {
+    display: none;
+  }`}
 `;
 
 export const Header = () => {

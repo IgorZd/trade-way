@@ -2,6 +2,7 @@ import React from "react";
 // @ts-ignore
 import styled, { useTheme } from "styled-components";
 import qrCode from "../../assets/qr_code.svg";
+import { media } from "../../styles/media";
 
 const Wrapper = styled.div`
   width: max-content;
@@ -9,6 +10,10 @@ const Wrapper = styled.div`
   flex-direction: column;
   align-items: flex-start;
   margin-bottom: 66px;
+  ${media.phone`
+    width: 100%;
+    margin-bottom: 32px;
+  `}
 `;
 const Title = styled.h4`
   font-weight: 700;
@@ -28,6 +33,9 @@ const Container = styled.div`
   border-radius: 30px;
   background-color: ${(props: any) => props.theme.colors.blue};
   padding: 18px;
+  ${media.phone`
+    width: 100%;
+  `}
 `;
 const QRcode = styled.img`
   margin-right: 18px;
