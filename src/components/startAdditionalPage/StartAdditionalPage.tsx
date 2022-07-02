@@ -26,14 +26,12 @@ const Title = styled.h1`
 export const StartAdditionalPage = ({
   title,
   positiveButtonValue,
-  positiveButtonOnClick,
   negativeButtonValue,
   negativeButtonOnClick,
   description,
 }: {
   title: string;
   positiveButtonValue: string;
-  positiveButtonOnClick: ((data: any) => void) | (() => void);
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
   description?: any;
@@ -46,14 +44,12 @@ export const StartAdditionalPage = ({
         {description ? (
           <CreateForm
             positiveButtonValue={positiveButtonValue}
-            positiveButtonOnClick={positiveButtonOnClick}
             negativeButtonValue={negativeButtonValue}
             negativeButtonOnClick={negativeButtonOnClick}
           />
         ) : (
           <SignInForm
             positiveButtonValue={positiveButtonValue}
-            positiveButtonOnClick={positiveButtonOnClick}
             negativeButtonValue={negativeButtonValue}
             negativeButtonOnClick={negativeButtonOnClick}
           />

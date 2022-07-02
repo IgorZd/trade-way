@@ -103,9 +103,6 @@ const Start = () => {
     <StartAdditionalPage
       title={"Sign In"}
       positiveButtonValue={"Sign In"}
-      positiveButtonOnClick={(data: any) => {
-        console.log(data);
-      }}
       negativeButtonValue={"Back"}
       negativeButtonOnClick={closeSignIn}
     />
@@ -113,9 +110,6 @@ const Start = () => {
     <StartAdditionalPage
       title={"Create your free account"}
       positiveButtonValue={"Create"}
-      positiveButtonOnClick={(data: any) => {
-        console.log(data);
-      }}
       negativeButtonValue={"Back"}
       negativeButtonOnClick={closeAccountOnClick}
       description={description}

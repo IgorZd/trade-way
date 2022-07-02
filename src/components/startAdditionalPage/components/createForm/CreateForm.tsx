@@ -11,20 +11,22 @@ import {
   SendButton,
 } from "../signInForm/SignInForm";
 import { Button } from "../../../button/Button";
+import { PrivacyPolicy } from "../privacyPolicy/PrivacyPolicy";
+import { useRouter } from "next/router";
 
 export const CreateForm = ({
   positiveButtonValue,
-  positiveButtonOnClick,
   negativeButtonValue,
   negativeButtonOnClick,
 }: {
   positiveButtonValue: string;
-  positiveButtonOnClick: ((data: any) => void) | (() => void);
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
 }) => {
   const theme = useTheme();
+  const router = useRouter();
   const { black, black2, white, blue } = theme.colors;
+
   const formik = useFormik({
     validate: (values) => {
       const errors: any = {};
@@ -64,10 +66,12 @@ export const CreateForm = ({
       email: "",
       password: "",
       phoneNumber: "",
-      isAcceptedPolicy: true,
+      isAcceptedPolicy: false,
     },
     onSubmit: (values, { resetForm, setSubmitting }) => {
       console.log(values);
+      resetForm();
+      router.push("/");
     },
   });
 
@@ -136,12 +140,18 @@ export const CreateForm = ({
             </ContainerInput>
           );
         })}
+        <PrivacyPolicy
+          error={formik.errors.isAcceptedPolicy}
+          value={formik.values.isAcceptedPolicy}
+          formik={formik.getFieldProps(`isAcceptedPolicy`)}
+          nameField={"isAcceptedPolicy"}
+        />
       </Form>
       <ButtonsWrapper>
         <SendButton
           value={positiveButtonValue}
           onClick={() => {
-            positiveButtonOnClick(formik.values);
+            formik.handleSubmit();
           }}
           className={
             disabled || formik.values.userName.length === 0 ? "disabled" : ""
@@ -152,6 +162,7 @@ export const CreateForm = ({
           borderColor={blue}
           hoverColor={white}
           borderColorHover={blue}
+          type={"submit"}
         />
         <Button
           value={negativeButtonValue}

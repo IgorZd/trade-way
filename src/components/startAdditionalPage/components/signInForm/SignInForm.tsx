@@ -5,6 +5,7 @@ import styled, { useTheme } from "styled-components";
 import { media } from "../../../../styles/media";
 import { Input } from "../../../input/Input";
 import { Button } from "../../../button/Button";
+import { useRouter } from "next/router";
 
 export const Form = styled.form`
   width: 440px;
@@ -51,16 +52,15 @@ export const SendButton = styled(Button)`
 
 export const SignInForm = ({
   positiveButtonValue,
-  positiveButtonOnClick,
   negativeButtonValue,
   negativeButtonOnClick,
 }: {
   positiveButtonValue: string;
-  positiveButtonOnClick: ((data: any) => void) | (() => void);
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
 }) => {
   const theme = useTheme();
+  const router = useRouter();
   const { black, black2, white, blue } = theme.colors;
 
   const formik = useFormik({
@@ -89,6 +89,7 @@ export const SignInForm = ({
     onSubmit: (values, { resetForm, setSubmitting }) => {
       console.log(values);
       resetForm();
+      router.push("/");
     },
   });
 
@@ -139,7 +140,7 @@ export const SignInForm = ({
         <SendButton
           value={positiveButtonValue}
           onClick={() => {
-            positiveButtonOnClick(formik.values);
+            formik.handleSubmit();
           }}
           className={
             disabled || formik.values.userName.length === 0 ? "disabled" : ""
@@ -150,6 +151,7 @@ export const SignInForm = ({
           borderColor={blue}
           hoverColor={white}
           borderColorHover={blue}
+          type={"submit"}
         />
         <Button
           value={negativeButtonValue}
