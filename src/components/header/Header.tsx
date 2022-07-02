@@ -79,7 +79,7 @@ export const Header = ({
   setIsOpenMobileNav,
 }: {
   navList: { value: string; to: string }[];
-  setIsOpenMobileNav: React.Dispatch<React.SetStateAction<boolean>>;
+  setIsOpenMobileNav: (value: boolean) => void;
   isOpenMobileNav?: boolean;
 }) => {
   const theme = useTheme();
@@ -107,7 +107,7 @@ export const Header = ({
         modalIsOpen={isOpenMobileNav}
         black={black}
         onClick={() => {
-          setIsOpenMobileNav((el) => !el);
+          setIsOpenMobileNav(!isOpenMobileNav);
         }}
       >
         <div />

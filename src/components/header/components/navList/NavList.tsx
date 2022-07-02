@@ -1,6 +1,8 @@
 import React from "react";
+import { useSelector } from "react-redux";
 // @ts-ignore
 import styled from "styled-components";
+import { selectActivePath } from "../../../../app/state/navSlice";
 import { media } from "../../../../styles/media";
 import { NavItem } from "./components/navItem/NavItem";
 
@@ -18,11 +20,20 @@ const List = styled.ul`
 `;
 
 export const NavList = ({ itemsList }: { itemsList: any[] }) => {
+  const activePath = useSelector(selectActivePath);
+
   return (
     <List>
       {itemsList.map((item: any, index: number) => {
         const { value, to } = item;
-        return <NavItem key={index} value={value} to={to} />;
+        return (
+          <NavItem
+            key={index}
+            value={value}
+            to={to}
+            isActive={activePath === to}
+          />
+        );
       })}
     </List>
   );

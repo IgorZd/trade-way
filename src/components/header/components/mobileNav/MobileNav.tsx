@@ -5,14 +5,14 @@ import Link from "next/link";
 import { Button } from "../../../button/Button";
 
 const Wrapper = styled.div`
-  width: calc(100% + 60px);
+  width: calc(100% + 36px);
   height: 100%;
   box-sizing: border-box;
   background-color: white;
   position: absolute;
   z-index: 100;
   top: 0;
-  left: -30px;
+  left: -18px;
   border-radius: 20px;
   padding: 74px 30px 30px 30px;
 `;

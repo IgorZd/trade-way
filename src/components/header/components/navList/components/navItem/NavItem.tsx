@@ -9,22 +9,35 @@ const Item = styled.li`
   align-items: center;
   justify-content: center;
   cursor: pointer;
+  &.active {
+    & > a {
+      font-weight: 600;
+    }
+  }
   & > a {
     color: ${(props: any) => props.theme.colors.black1};
     font-family: "Manrope", sans-serif;
     font-weight: 200;
     text-decoration: none;
-    transition: all 0.3s ease-in-out;
   }
   &:hover > a {
     font-weight: 600;
   }
 `;
 
-export const NavItem = ({ value, to }: { value: string; to: string }) => {
+export const NavItem = ({
+  value,
+  to,
+  isActive,
+}: {
+  value: string;
+  to: string;
+  isActive?: boolean;
+}) => {
   const theme = useTheme();
+
   return (
-    <Item theme={theme}>
+    <Item theme={theme} className={isActive ? "active" : ""}>
       <Link href={to}>{value}</Link>
     </Item>
   );

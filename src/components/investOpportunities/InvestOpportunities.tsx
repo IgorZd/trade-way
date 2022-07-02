@@ -47,14 +47,11 @@ const Item = styled.div`
     border-left: 2px solid #dddddd;
     border-right: 2px solid #dddddd;
     ${media.phone`
-      padding: 0 40px;
-    `}
-    ${media.phoneS`
       border: none;
       padding: 12px 0;
     `}
   }
-  ${media.phoneS`
+  ${media.phone`
     padding: 0;
   `}
 `;
