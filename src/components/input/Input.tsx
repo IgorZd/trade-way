@@ -1,7 +1,8 @@
-import React, { FC } from "react";
+import React, { FC, useState } from "react";
 // @ts-ignore
 import styled, { useTheme } from "styled-components";
 import { media } from "../../styles/media";
+import { Eye } from "./components/eye/Eye";
 
 const InputField = styled.div`
   position: relative;
@@ -52,7 +53,21 @@ const InputContent = styled.input`
     font-size: 16px;
   `}
 `;
-
+const StyledEye = styled(Eye)`
+  position: absolute;
+  top: 8px;
+  right: 16px;
+  cursor: pointer;
+  transition: all 0.3s linear;
+  &:hover {
+    opacity: 0.8;
+  }
+  & > path {
+    transition: all 0.3s linear;
+    stroke: ${(props: any) =>
+      props.isActive ? props.theme.colors.blue : "rgba(0, 0, 0, 0.2)"};
+  }
+`;
 const ErrorMessage = styled.span`
   font-family: "Manrope", sans-serif;
   font-size: 12px;
@@ -94,6 +109,15 @@ export const Input: FC<InputProps> = ({
   ...props
 }) => {
   const theme = useTheme();
+  const [localType, setLocalType] = useState(type);
+
+  const changeLocalType = () => {
+    if (localType === "password") {
+      setLocalType("text");
+    } else {
+      setLocalType("password");
+    }
+  };
 
   return (
     <InputField {...props}>
@@ -102,11 +126,14 @@ export const Input: FC<InputProps> = ({
         className={error && "error"}
         id={nameField}
         name={nameField}
-        type={type}
+        type={nameField === "password" ? localType : type}
         value={value}
         placeholder={placeholder}
         {...formik}
       />
+      {nameField === "password" && (
+        <StyledEye isActive={localType === "text"} onClick={changeLocalType} />
+      )}
       <ErrorMessage className={error && "isshown"}>{error}</ErrorMessage>
     </InputField>
   );
