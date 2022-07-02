@@ -75,11 +75,13 @@ const BurgerButton = styled.div`
 
 export const Header = ({
   navList,
-  isOpenMobileNav,
   setIsOpenMobileNav,
+  getStartedOnClick,
+  isOpenMobileNav,
 }: {
   navList: { value: string; to: string }[];
   setIsOpenMobileNav: (value: boolean) => void;
+  getStartedOnClick: (isMobile?: boolean) => void;
   isOpenMobileNav?: boolean;
 }) => {
   const theme = useTheme();
@@ -91,9 +93,7 @@ export const Header = ({
       <NavList itemsList={navList} />
       <Button
         value={"Get started"}
-        onClick={() => {
-          console.log("Get started");
-        }}
+        onClick={getStartedOnClick}
         width={"162px"}
         backgroundColor={white}
         color={black2}

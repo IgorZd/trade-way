@@ -53,6 +53,7 @@ export const Button = ({
   borderColorHover,
   fontSize,
   borderRadius,
+  type,
   ...props
 }: {
   value: string;
@@ -68,6 +69,7 @@ export const Button = ({
   borderColorHover?: string;
   fontSize?: string;
   borderRadius?: string;
+  type?: string;
   className?: string;
 }) => {
   const theme = useTheme();
@@ -87,6 +89,7 @@ export const Button = ({
       borderColorHover={borderColorHover}
       borderRadius={borderRadius}
       fontSize={fontSize}
+      type={type}
       {...props}
     >
       {value}

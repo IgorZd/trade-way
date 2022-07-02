@@ -48,7 +48,7 @@ export const MobileNav = ({
   closeMobileNav,
 }: {
   navList: { value: string; to: string }[];
-  getStartedOnClick: () => void;
+  getStartedOnClick: (isMobile?: boolean) => void;
   closeMobileNav: () => void;
   isOpenModal?: boolean;
 }) => {
@@ -69,7 +69,9 @@ export const MobileNav = ({
         })}
         <Button
           value={"Get started"}
-          onClick={getStartedOnClick}
+          onClick={() => {
+            getStartedOnClick(true);
+          }}
           width={"184px"}
           backgroundColor={white}
           color={black2}

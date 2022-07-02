@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 // @ts-ignore
 import styled from "styled-components";
 import { media } from "../styles/media";
@@ -90,7 +90,8 @@ export const HeaderLayout = ({
   const dispatch = useDispatch();
   const isOpenMobileNav = useSelector(selectIsOpenMobileNav);
   const navList = useSelector(selectNavList);
-  const currentPath = useRouter().pathname;
+  const router = useRouter();
+  const currentPath = router.pathname;
 
   const setIsOpenMobileNavigation = (value: boolean) => {
     dispatch(setIsOpenMobileNav({ value }));
@@ -98,8 +99,9 @@ export const HeaderLayout = ({
   const closeMobileNav = () => {
     dispatch(setIsOpenMobileNav({ value: false }));
   };
-  const getStartedMobileOnClick = () => {
-    console.log("Get started");
+  const getStartedOnClick = (isMobile?: boolean) => {
+    router.push("/start");
+    isMobile && closeMobileNav();
   };
 
   useEffect(() => {
@@ -115,12 +117,13 @@ export const HeaderLayout = ({
             navList={navList}
             isOpenMobileNav={isOpenMobileNav}
             setIsOpenMobileNav={setIsOpenMobileNavigation}
+            getStartedOnClick={getStartedOnClick}
           />
           {children}
           <MobileNav
             navList={navList}
             isOpenModal={isOpenMobileNav}
-            getStartedOnClick={getStartedMobileOnClick}
+            getStartedOnClick={getStartedOnClick}
             closeMobileNav={closeMobileNav}
           />
         </Container>
