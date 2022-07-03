@@ -17,7 +17,6 @@ import { useRouter } from "next/router";
 const Wrapper = styled.div`
   width: 100%;
   height: 100%;
-
   box-sizing: border-box;
   display: flex;
   align-items: center;
@@ -30,6 +29,7 @@ const Wrapper = styled.div`
   }
 
   ${media.phone`
+    height: 100vh;
     padding: 44px 18px;
   `}
 `;
@@ -74,8 +74,8 @@ const Container = styled.div`
 
   ${media.tablet`
     padding: 30px 0 40px 0;
-    min-height: 600px;
-  `}
+
+`}
   ${media.phone`
     padding: 18px 0 28px 0;
   `}

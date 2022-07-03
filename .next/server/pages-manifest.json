@@ -2,8 +2,9 @@
   "/_app": "pages/_app.js",
   "/_error": "pages/_error.js",
   "/_document": "pages/_document.js",
-  "/premium": "pages/premium.js",
+  "/app": "pages/app.js",
   "/blog": "pages/blog.js",
   "/features": "pages/features.js",
-  "/start": "pages/start.js"
+  "/premium": "pages/premium.js",
+  "/": "pages/index.js"
 }

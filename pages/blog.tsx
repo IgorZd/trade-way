@@ -11,7 +11,7 @@ export const Title = styled.h1`
   margin: 52px 0 16px 0;
 `;
 export const Wrapper = styled.div`
-  height: 600px;
+  height: 400px;
   overflow: auto;
 `;
 export const PostWrapper = styled.div`
