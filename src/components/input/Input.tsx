@@ -131,7 +131,7 @@ export const Input: FC<InputProps> = ({
         placeholder={placeholder}
         {...formik}
       />
-      {nameField === "password" && (
+      {nameField === "password" && value.length > 0 && (
         <StyledEye isActive={localType === "text"} onClick={changeLocalType} />
       )}
       <ErrorMessage className={error && "isshown"}>{error}</ErrorMessage>

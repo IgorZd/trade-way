@@ -112,6 +112,7 @@ const Start = () => {
       positiveButtonValue={"Create"}
       negativeButtonValue={"Back"}
       negativeButtonOnClick={closeAccountOnClick}
+      openSignIn={openSignIn}
       description={description}
     />
   ) : (

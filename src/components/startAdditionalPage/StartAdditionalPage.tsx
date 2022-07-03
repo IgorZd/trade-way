@@ -28,12 +28,14 @@ export const StartAdditionalPage = ({
   positiveButtonValue,
   negativeButtonValue,
   negativeButtonOnClick,
+  openSignIn,
   description,
 }: {
   title: string;
   positiveButtonValue: string;
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
+  openSignIn?: () => void;
   description?: any;
 }) => {
   return (
@@ -46,6 +48,7 @@ export const StartAdditionalPage = ({
             positiveButtonValue={positiveButtonValue}
             negativeButtonValue={negativeButtonValue}
             negativeButtonOnClick={negativeButtonOnClick}
+            openSignIn={openSignIn ? openSignIn : () => {}}
           />
         ) : (
           <SignInForm

@@ -86,7 +86,7 @@ export const SignInForm = ({
       userName: "",
       password: "",
     },
-    onSubmit: (values, { resetForm, setSubmitting }) => {
+    onSubmit: (values, { resetForm }) => {
       console.log(values);
       resetForm();
       router.push("/");

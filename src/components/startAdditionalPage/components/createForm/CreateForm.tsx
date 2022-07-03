@@ -12,19 +12,19 @@ import {
 } from "../signInForm/SignInForm";
 import { Button } from "../../../button/Button";
 import { PrivacyPolicy } from "../privacyPolicy/PrivacyPolicy";
-import { useRouter } from "next/router";
 
 export const CreateForm = ({
   positiveButtonValue,
   negativeButtonValue,
   negativeButtonOnClick,
+  openSignIn,
 }: {
   positiveButtonValue: string;
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
+  openSignIn: () => void;
 }) => {
   const theme = useTheme();
-  const router = useRouter();
   const { black, black2, white, blue } = theme.colors;
 
   const formik = useFormik({
@@ -68,10 +68,10 @@ export const CreateForm = ({
       phoneNumber: "",
       isAcceptedPolicy: false,
     },
-    onSubmit: (values, { resetForm, setSubmitting }) => {
+    onSubmit: (values, { resetForm }) => {
       console.log(values);
       resetForm();
-      router.push("/");
+      openSignIn();
     },
   });
 
