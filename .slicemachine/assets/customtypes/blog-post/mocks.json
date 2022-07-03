@@ -1,0 +1,31 @@
+{
+  "id": "19109069-8462-4725-9f18-07bb19a97a47",
+  "uid": "sed-nihil-quisquam",
+  "type": "blog-post",
+  "data": {
+    "publishDate": "2015-05-23",
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Visualize extensible solutions",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Fugiat ex magna minim exercitation amet excepteur labore cillum elit enim esse minim deserunt commodo.",
+        "spans": []
+      }
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1499951360447-b19be8fe80f5?w=900&h=500&fit=crop"
+    }
+  }
+}

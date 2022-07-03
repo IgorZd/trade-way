@@ -1211,7 +1211,7 @@ eval(__webpack_require__.ts("__webpack_require__.r(__webpack_exports__);\n/* har
 /***/ (function(module, __unused_webpack_exports, __webpack_require__) {
 
 "use strict";
-module.exports = JSON.parse('{"_latest":"0.3.0","apiEndpoint":"https://trade-way.prismic.io/api/v2","libraries":["@/slices"],"localSliceSimulatorURL":"http://localhost:3000/slice-simulator","framework":"previousNext"}');
+module.exports = JSON.parse('{"_latest":"0.3.0","apiEndpoint":"https://trade-way.prismic.io/api/v2","libraries":["@/slices"],"localSliceSimulatorURL":"http://localhost:3000/slice-simulator"}');
 
 /***/ })
 

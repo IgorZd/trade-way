@@ -1,0 +1,30 @@
+{
+  "id": "24c0f790-4b3c-46dd-a1ac-df197bd7e753",
+  "uid": "temporibus-sunt-quidem",
+  "type": "features",
+  "data": {
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1587840171670-8b850147754e?w=900&h=500&fit=crop"
+    },
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Extend cross-platform architectures",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Sit anim reprehenderit elit cillum veniam laboris veniam.",
+        "spans": []
+      }
+    ]
+  }
+}

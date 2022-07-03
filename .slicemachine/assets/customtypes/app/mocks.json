@@ -1,0 +1,21 @@
+{
+  "id": "f379c332-18fe-4f1c-b385-1c5deb9cd5ef",
+  "uid": "ea-alias-voluptatibus",
+  "type": "app",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Dolor laborum reprehenderit esse sint laborum elit velit esse aute ipsum aute ex et sunt. Ut nisi eu Lorem exercitation elit sint ea reprehenderit.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Exercitation occaecat anim elit ullamco consectetur magna pariatur aute duis. Sit velit commodo officia dolore.",
+        "spans": []
+      }
+    ]
+  }
+}

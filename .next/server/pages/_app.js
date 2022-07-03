@@ -742,7 +742,7 @@ module.exports = import("@xstyled/styled-components");;
 /***/ ((module) => {
 
 "use strict";
-module.exports = JSON.parse('{"_latest":"0.3.0","apiEndpoint":"https://trade-way.prismic.io/api/v2","libraries":["@/slices"],"localSliceSimulatorURL":"http://localhost:3000/slice-simulator","framework":"previousNext"}');
+module.exports = JSON.parse('{"_latest":"0.3.0","apiEndpoint":"https://trade-way.prismic.io/api/v2","libraries":["@/slices"],"localSliceSimulatorURL":"http://localhost:3000/slice-simulator"}');
 
 /***/ })
 

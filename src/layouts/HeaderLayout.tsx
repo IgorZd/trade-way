@@ -74,6 +74,7 @@ const Container = styled.div`
 
   ${media.tablet`
     padding: 30px 0 40px 0;
+    min-height: 600px;
   `}
   ${media.phone`
     padding: 18px 0 28px 0;

@@ -1,0 +1,30 @@
+{
+  "id": "9791cfe1-e643-4f93-a192-fa4d34de877f",
+  "uid": "autem-quibusdam-veniam",
+  "type": "features1",
+  "data": {
+    "title": [
+      {
+        "type": "paragraph",
+        "text": "Officia deserunt est laboris ea ad enim consectetur labore ipsum et do. Eiusmod occaecat et minim laborum deserunt culpa anim exercitation do ullamco non dolore. Eiusmod anim aliqua elit adipisicing laborum consequat dolore minim minim excepteur dolore aliquip nostrud.",
+        "spans": []
+      }
+    ],
+    "description": [
+      {
+        "type": "paragraph",
+        "text": "Nulla commodo mollit veniam quis officia amet enim ipsum anim commodo mollit cupidatat. Dolore minim irure do est mollit tempor esse sint elit occaecat Lorem ad dolor ex. Nostrud qui consectetur occaecat laborum.",
+        "spans": []
+      }
+    ],
+    "image": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1498050108023-c5249f4df085?w=900&h=500&fit=crop"
+    }
+  }
+}
