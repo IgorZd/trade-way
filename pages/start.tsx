@@ -105,6 +105,7 @@ const Start = () => {
       positiveButtonValue={"Sign In"}
       negativeButtonValue={"Back"}
       negativeButtonOnClick={closeSignIn}
+      isOpenSignIn={isOpenSignInModal}
     />
   ) : isOpenCreateModal ? (
     <StartAdditionalPage
@@ -116,7 +117,7 @@ const Start = () => {
       description={description}
     />
   ) : (
-    <HeaderLayout isMain>
+    <HeaderLayout isBig>
       <Wrapper>
         <Image src={startImage.src} alt={"Background Image"} />
         <Title theme={theme}>Start Learning</Title>

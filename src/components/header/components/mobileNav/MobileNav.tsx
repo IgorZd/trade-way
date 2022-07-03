@@ -3,6 +3,8 @@ import React from "react";
 import styled, { useTheme } from "styled-components";
 import Link from "next/link";
 import { Button } from "../../../button/Button";
+import { useSelector } from "react-redux";
+import { selectActivePath } from "../../../../app/state/navSlice";
 
 const Wrapper = styled.div`
   width: calc(100% + 36px);
@@ -32,7 +34,7 @@ const Item = styled.li`
   & > a {
     color: ${(props: any) => props.theme.colors.black1};
     font-size: 20px;
-    font-weight: 200;
+    font-weight: ${(props: any) => (props.isActive ? "600" : "200")};
     font-family: "Manrope", sans-serif;
     text-decoration: none;
   }
@@ -54,6 +56,7 @@ export const MobileNav = ({
 }) => {
   const theme = useTheme();
   const { black, black2, white, blue } = theme.colors;
+  const activePath = useSelector(selectActivePath);
 
   return isOpenModal ? (
     <Wrapper>
@@ -62,7 +65,12 @@ export const MobileNav = ({
           const { value, to } = item;
 
           return (
-            <Item key={index} theme={theme} onClick={closeMobileNav}>
+            <Item
+              key={index}
+              theme={theme}
+              onClick={closeMobileNav}
+              isActive={activePath === to}
+            >
               <Link href={to}>{value}</Link>
             </Item>
           );

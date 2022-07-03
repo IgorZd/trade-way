@@ -88,9 +88,11 @@ const Container = styled.div`
 export const HeaderLayout = ({
   children,
   isMain,
+  isBig,
 }: {
   children: any;
   isMain?: boolean;
+  isBig?: boolean;
   className?: string;
 }) => {
   const dispatch = useDispatch();
@@ -115,7 +117,7 @@ export const HeaderLayout = ({
   }, [currentPath]);
 
   return (
-    <Wrapper className={isMain ? "main" : ""}>
+    <Wrapper className={isMain || isBig ? "main" : ""}>
       <Box>
         {isMain && <Image src={backgroundImage.src} alt={"Background"} />}
         <Container>

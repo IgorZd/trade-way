@@ -29,6 +29,7 @@ export const StartAdditionalPage = ({
   negativeButtonValue,
   negativeButtonOnClick,
   openSignIn,
+  isOpenSignIn,
   description,
 }: {
   title: string;
@@ -36,10 +37,11 @@ export const StartAdditionalPage = ({
   negativeButtonValue: string;
   negativeButtonOnClick: () => void;
   openSignIn?: () => void;
+  isOpenSignIn?: boolean;
   description?: any;
 }) => {
   return (
-    <HeaderLayout isMain>
+    <HeaderLayout isBig={true && !isOpenSignIn}>
       <Wrapper>
         <Title className={description ? "withDesc" : ""}>{title}</Title>
         {description && description()}

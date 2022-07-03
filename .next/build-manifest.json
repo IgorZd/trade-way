@@ -35,25 +35,10 @@
       "static/chunks/main.js",
       "static/chunks/pages/app.js"
     ],
-    "/blog": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/blog.js"
-    ],
     "/features": [
       "static/chunks/webpack.js",
       "static/chunks/main.js",
       "static/chunks/pages/features.js"
-    ],
-    "/premium": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/premium.js"
-    ],
-    "/start": [
-      "static/chunks/webpack.js",
-      "static/chunks/main.js",
-      "static/chunks/pages/start.js"
     ]
   },
   "ampFirstPages": []
