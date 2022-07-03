@@ -1,0 +1,21 @@
+{
+  "id": "5b3ad5c6-33ad-4efe-bc0a-a066a30c8ca3",
+  "uid": "accusamus-quis-quis",
+  "type": "content",
+  "data": {
+    "title": [
+      {
+        "type": "heading1",
+        "text": "Morph extensible supply-chains",
+        "spans": []
+      }
+    ],
+    "content": [
+      {
+        "type": "paragraph",
+        "text": "Ullamco ullamco magna sunt exercitation amet eu. Ut sint eu aute qui.",
+        "spans": []
+      }
+    ]
+  }
+}
