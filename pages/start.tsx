@@ -116,7 +116,7 @@ const Start = () => {
       description={description}
     />
   ) : (
-    <HeaderLayout>
+    <HeaderLayout isMain>
       <Wrapper>
         <Image src={startImage.src} alt={"Background Image"} />
         <Title theme={theme}>Start Learning</Title>

@@ -39,7 +39,7 @@ export const StartAdditionalPage = ({
   description?: any;
 }) => {
   return (
-    <HeaderLayout>
+    <HeaderLayout isMain>
       <Wrapper>
         <Title className={description ? "withDesc" : ""}>{title}</Title>
         {description && description()}

@@ -31,6 +31,10 @@ const Wrapper = styled.div`
   ${media.phone`
     height: 100vh;
     padding: 44px 18px;
+    &.main {
+      height: auto;
+      min-height: auto;
+  }
   `}
 `;
 const Box = styled.div`
@@ -87,6 +91,7 @@ export const HeaderLayout = ({
 }: {
   children: any;
   isMain?: boolean;
+  className?: string;
 }) => {
   const dispatch = useDispatch();
   const isOpenMobileNav = useSelector(selectIsOpenMobileNav);
